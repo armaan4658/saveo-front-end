@@ -1,0 +1,44 @@
+$small:500px;
+.placeOrder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 0;
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            @media screen and (max-width:$small) {
+                flex-wrap: wrap;
+            }
+            margin: 5px 0;
+            li{
+                border: 2px solid black ;
+                padding: 2px 4px;
+                margin: 0 3px;
+                // font-size: 10px;
+                width:100%;
+            }
+        }
+    }
+    .form{
+        form{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            align-items:center;
+            margin: 10px 0;
+            @media  screen and (max-width:$small) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
+            }
+        }
+    }
+}

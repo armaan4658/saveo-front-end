@@ -1,0 +1,29 @@
+.orders{
+    div{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+            text-align:center;
+        }
+        h2{
+            text-align: center;
+        }
+        ul{
+            list-style-type:none;
+            li{
+                padding: 2px;
+                border:2px solid black;
+                margin: 2px 0;
+                border-radius: 3px;
+                transition: all .1s ease;
+                &:hover{
+                    background-color: rgb(88, 88, 88);
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

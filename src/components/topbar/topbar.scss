@@ -1,0 +1,26 @@
+$small:500px;
+.topbar{
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    li{
+        list-style: none;
+        color: white;
+        font-size: 25px;
+        font-weight: 400;
+        @media screen and (max-width:$small) {
+            font-size: 12px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: gray;
+            }
+        }
+    }
+
+}
