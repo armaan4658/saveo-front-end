@@ -3,6 +3,7 @@ import {Orders , OrdLoading} from '../../App'
 import './orders.scss';
 import {FullScreenDialog} from './dialog';
 import axios from 'axios';
+import LinearProgress from '@mui/material/LinearProgress';
 export const OrdersComponent = () => {
     const orders = useContext(Orders);
     const ordLoading = useContext(OrdLoading);
@@ -28,6 +29,7 @@ export const OrdersComponent = () => {
     return(
         <div className="orders">
             <div>
+                {ordLoading ? <LinearProgress/>:''}
                 <h3>Order Id</h3>
                 {ordLoading===false && data.length > 0 ? (
                     <ul>

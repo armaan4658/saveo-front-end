@@ -38,11 +38,16 @@ export const PlaceOrder = () => {
             axios.post(`${heroku}/placeorder`,order)
             .then(res=>{
                 if(res.status===200){
-                    if(res.data._id.length > 0){
-                        setOrder([]);
-                        setMsg("Order placed successfully");
-                        getOrder();
-                    }else{
+                    try{
+                        if(res.data._id.length > 0){
+                            setOrder([]);
+                            setMsg("Order placed successfully");
+                            getOrder();
+                        }
+                    }catch(e){
+                        console.log(e);
+                    }
+                    if(typeof(res.data)==="string"){
                         setMsg(res.data);
                     }
                 }
